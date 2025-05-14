@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "maxssau.h": "c",
-        "typedef.h": "c"
+        "typedef.h": "c",
+        "stdexcept": "cpp"
     }
 }
