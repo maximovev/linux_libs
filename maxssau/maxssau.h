@@ -16,9 +16,18 @@
 #include <stdio.h>
 
 #include "typedef.h"
-#include "time_user.h"
-#include "xml_io.h"
 
+#ifdef __use__time_user__
+#include "time_user.h"
+#endif
+
+#ifdef __use__xml_io__
+    #include "xml_io.h"
+#endif
+
+#ifdef __use__neural__
+    #include "neural.h"
+#endif
 
 
 #endif

@@ -1,3 +1,4 @@
+#define __use__xml_io__
 
 #include <stdio.h>
 #include "../maxssau/maxssau.h"

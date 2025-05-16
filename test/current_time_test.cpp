@@ -1,3 +1,5 @@
+#define __use__time_user__
+
 #include "../maxssau/maxssau.h"
 #include <stdio.h>
 

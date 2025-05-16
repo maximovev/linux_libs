@@ -2,6 +2,9 @@
     "files.associations": {
         "maxssau.h": "c",
         "typedef.h": "c",
-        "stdexcept": "cpp"
-    }
+        "stdexcept": "cpp",
+        "cfile.h": "c",
+        "cppfile.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
