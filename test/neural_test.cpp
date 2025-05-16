@@ -15,15 +15,14 @@ int main(int arg_count, char* arg_value[])
 
     linear_network->CreateNN(LAYERS_COUNT);
 
-    linear_network->Layers[0].Node=new double;
+    linear_network->Layers[0].Node=new LayerNode<double>[100];
 
     for(int i=1;i<linear_network->GetLayersCount()-1;i++)
     {
-        linear_network->Layers[i].Node=(double*)malloc(sizeof(double)*NODE_COUNT);
 
         for(int j=0;j<NODE_COUNT;j++)
         {
-            linear_network->Layers[i].Node[j]=(double)(i*j);
+            linear_network->Layers[i].w[j]=(double)(i*j);
         }
     }
 

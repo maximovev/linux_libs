@@ -8,19 +8,28 @@ namespace maxssau
 {
 
     template <typename DataType>
+    struct LayerNode{
+        DataType w;
+        DataType value;
+    };
+    
+
+
+    template <typename DataType>
     class Layer
     {
         public:
             Layer(unsigned int node_count)
             {
-                Node=(DataType*)malloc(node_count*sizeof(DataType));
+                Node=(DataType*)malloc(node_count*sizeof(LayerNode<DataType>));
+                
             }
             ~Layer()
             {
                 free(Node);
             }
 
-            DataType* Node;
+            LayerNode<double>* Node;
 
             unsigned int GetNodesCount()
             {
@@ -42,7 +51,14 @@ namespace maxssau
             {
                 Layers=(Layer<DataType>*)malloc(count*sizeof(Layer<DataType>));
                 layers_count=count;
-                return STATUS_OK;
+                if(Layers!=null)
+                {
+                    return STATUS_OK;
+                }
+                else
+                {
+                    return STATUS_FAIL;
+                }
             }
 
             NeuralNetwork()
@@ -50,11 +66,11 @@ namespace maxssau
 
             }
 
-            NeuralNetwork(unsigned int count)
+            /*NeuralNetwork(unsigned int count)
             {
                 Layers=(Layer<DataType>*)malloc(count*sizeof(Layer<DataType>));
                 layers_count=count;
-            }
+            }*/
 
             ~NeuralNetwork()
             {
@@ -81,7 +97,7 @@ namespace maxssau
             {
                 DataType result=0;
 
-                for(int i=0;i<GetLayersCount();i++)
+                for(int i=1;i<this->GetLayersCount();i++)
                 {
                     
                 }
