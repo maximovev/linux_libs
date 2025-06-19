@@ -37,4 +37,13 @@
     #include "raw.h"
 #endif
 
+#ifdef __use__cubic__interpolation__
+	#include "cubic_interpolate.h"
+#endif
+
+#ifdef __use__matrix__
+	#include "matrix.h"
+#endif
+
+
 #endif

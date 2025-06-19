@@ -6,6 +6,7 @@ all:
 	make xml_io_test
 	make neural
 	make minmax
+	make cubic_interpolation
 
 typedef_test:
 	gcc test/typedef_test.cpp -o out/typedef_test.elf
@@ -34,3 +35,7 @@ minmax:
 raw:
 	clear
 	$(CCPP) test/raw_test.cpp -o out/raw_test.elf
+
+cubic_interpolation:
+	clear
+	$(CCPP) test/cubic_interpolation_test.cpp -o out/cubic_interpolation_test.elf
