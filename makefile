@@ -5,6 +5,7 @@ all:
 	make current_time_test
 	make xml_io_test
 	make neural
+	make minmax
 
 typedef_test:
 	gcc test/typedef_test.cpp -o out/typedef_test.elf
@@ -25,3 +26,11 @@ xml_io_test:
 neural:
 	clear
 	$(CCPP) test/neural_test.cpp -o out/neural_test.elf
+
+minmax:
+	clear
+	$(CCPP) test/minmax_test.cpp -o out/minmax_test.elf
+
+raw:
+	clear
+	$(CCPP) test/raw_test.cpp -o out/raw_test.elf

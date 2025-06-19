@@ -29,5 +29,12 @@
     #include "neural.h"
 #endif
 
+#ifdef __use__minmax__
+    #include "minmax.h"
+#endif
+
+#ifdef __use__raw__
+    #include "raw.h"
+#endif
 
 #endif
