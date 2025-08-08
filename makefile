@@ -34,7 +34,7 @@ minmax:
 
 raw:
 	clear
-	$(CCPP) test/raw_test.cpp -o out/raw_test.elf
+	$(CCPP) test/raw_test.cpp -o out/raw_test.elf -lraw
 
 cubic_interpolation:
 	clear
